@@ -1,8 +1,8 @@
 // DOM Elements
 const time = document.getElementById('time'),
     greeting = document.getElementById('greeting'),
-    greeting = document.getElementById('name'),
-    greeting = document.getElementById('focus')
+    name = document.getElementById('name'),
+    focus = document.getElementById('focus')
 
 // Show Time
 function showTime(){
@@ -18,5 +18,10 @@ function showTime(){
     hour = hour % 12 || 12;
 
     // Output Time
-    time.innerHTML = `${hour}<span>:</span>${min}<span>:</span>${sec}<span>:</span>`
+    time.innerHTML = `${hour}<span>:</span>${min}<span>:</span>${sec}`
+
+    setTimeout(showTime, 1000);
 }
+
+// Run
+showTime();
